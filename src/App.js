@@ -1,26 +1,44 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Btn from './components/Btn';
+import Name from './components/Name';
+import Picture from './components/Picture';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+    state={
+        name: "Your Bee name",
+    }
+
+    alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+    randName = () => {
+        // const alphabet = "abcdefghijklmnopqrstuvwxyz";
+        const alphabetArray = [...this.alphabet];
+        let nameR = "";
+        // const nameLength = Math.floor((Math.random()+1)*3);
+        const nameLength = Math.floor(Math.random()*5+1);
+        for(let i=0; i<=nameLength; i++){
+            let index = Math.floor(Math.random()*alphabetArray.length);
+            nameR+=alphabetArray[index];
+            // name+=alphabetArray[index];
+        }
+        this.setState({name:"bee"+nameR});
+    }
+
+    render(){
+        return(
+        <div>
+            <Picture/>
+            <Name
+            name = {this.state.name}
+            />
+            <Btn
+            fn = {this.randName}
+            />
+        </div>
+        )
+    }
 }
+
+
 
 export default App;
