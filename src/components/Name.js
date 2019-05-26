@@ -1,8 +1,5 @@
-import React from 'react';
+import React from "react";
 
-const Name = ({name}) => (
-    <h1 className="bee__name">{name}</h1>
-)
-
+const Name = ({ name }) => <h1 className="bee__name">{name}</h1>;
 
 export default Name;
