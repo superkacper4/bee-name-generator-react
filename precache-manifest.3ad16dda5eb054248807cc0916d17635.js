@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2439fd8a0225514ccfa02ea6c3e23c43",
+    "revision": "b40a309ea0b2c81a7297852948425ac3",
     "url": "/bee-name-generator-react/index.html"
   },
   {
