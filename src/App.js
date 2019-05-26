@@ -2,7 +2,7 @@ import React from "react";
 import Btn from "./components/Btn";
 import Name from "./components/Name";
 import Picture from "./components/Picture";
-import "index.css";
+import "./index.css";
 
 class App extends React.Component {
   state = {
@@ -28,8 +28,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Picture className="picture" />
-        <Name name={this.state.name} className="name" />
+        <Picture />
+        <Name name={this.state.name} />
         <Btn fn={this.randName} />
       </div>
     );
